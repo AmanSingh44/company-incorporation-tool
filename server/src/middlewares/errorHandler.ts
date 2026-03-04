@@ -1,6 +1,6 @@
 import type { ErrorRequestHandler } from "express";
 import { BAD_REQUEST, CONFLICT, INTERNAL_SERVER_ERROR } from "../constants/http.js";
-import { Prisma } from "../generated/prisma/client.js";
+import {  Prisma } from '@prisma/client'
 
 
 

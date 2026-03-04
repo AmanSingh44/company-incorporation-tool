@@ -6,6 +6,12 @@ COPY package.json package-lock.json* ./
 
 RUN npm install
 
+COPY prisma ./prisma
+
+
+RUN npx prisma generate
+
+
 COPY . .
 
 RUN npm run build
@@ -13,4 +19,4 @@ RUN npm run build
 
 EXPOSE 7000
 
-CMD npx prisma migrate deploy && npx prisma generate && npm run start
+CMD npx prisma migrate deploy && npm run start
