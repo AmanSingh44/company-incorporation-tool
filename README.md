@@ -118,13 +118,19 @@ cd client
 npm install
 ```
 
-**3. Start the development server:**
+**3. Create a `.env` file inside the `client/` directory:**
+
+```env
+VITE_API_URL=http://localhost:${your_backend_port}/api
+```
+
+**4. Start the development server:**
 
 ```bash
 npm run dev
 ```
 
-**4. Open the frontend in your browser:**
+**5. Open the frontend in your browser:**
 
 ```
 http://localhost:5173
