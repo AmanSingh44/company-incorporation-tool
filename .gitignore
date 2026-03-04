@@ -1,0 +1,19 @@
+# ENV
+.env
+.env.*
+!.env.example
+
+# NODE
+node_modules/
+
+# BUILD
+dist/
+client/dist/
+server/dist/
+
+# PRISMA
+server/src/generated/
+
+# OS
+.DS_Store
+Thumbs.db

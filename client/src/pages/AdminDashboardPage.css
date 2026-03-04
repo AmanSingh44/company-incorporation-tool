@@ -1,0 +1,205 @@
+.admin-page {
+    min-height: 100vh;
+    background-color: var(--outer-bg);
+    padding: 40px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.admin-header h2 {
+    margin: 0;
+    color: var(--text-dark);
+}
+
+.admin-logout {
+    padding: 8px 18px;
+    border: none;
+    border-radius: var(--radius);
+    background-color: var(--primary);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.admin-logout:hover {
+    opacity: 0.8;
+}
+
+.admin-status {
+    color: #888;
+    font-size: 14px;
+}
+
+.admin-error {
+    color: #e05555;
+}
+
+
+/* Table */
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--form-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.admin-table th {
+    text-align: left;
+    padding: 14px 20px;
+    font-size: 15px;
+    font-weight: 800;
+    color: #888;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: var(--form-bg);
+}
+
+.admin-table td {
+    padding: 14px 20px;
+    font-size: 14px;
+    color: var(--text-dark);
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.admin-table tbody tr {
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.admin-table tbody tr:hover {
+    background-color: var(--sidebar-bg);
+}
+
+.admin-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* Overlay backdrop */
+
+.overlay-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+
+/* Overlay card */
+
+.overlay-card {
+    background-color: var(--form-bg);
+    border-radius: var(--radius);
+    padding: 36px;
+    width: 480px;
+    max-width: 90vw;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.overlay-loading {
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+    padding: 20px 0;
+}
+
+.overlay-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.overlay-header h3 {
+    margin: 0 0 6px 0;
+    color: var(--text-dark);
+    font-size: 1.2rem;
+}
+
+.overlay-meta {
+    font-size: 13px;
+    color: #888;
+    display: inline-flex;
+    gap: 10px;
+}
+
+.overlay-close {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #aaa;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.overlay-close:hover {
+    color: var(--text-dark);
+}
+
+
+/* Shareholder rows */
+
+.overlay-shareholders {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sh-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    background-color: var(--sidebar-bg);
+    border-radius: var(--radius);
+}
+
+.sh-num {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sh-name {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.sh-nationality {
+    font-size: 13px;
+    color: #888;
+}
+
+.overlay-empty {
+    color: #aaa;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px 0;
+}

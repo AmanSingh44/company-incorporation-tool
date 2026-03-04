@@ -1,0 +1,32 @@
+.page-container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 85px;
+}
+
+.page-frame {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.inner-layout {
+    display: flex;
+    width: 1000px;
+    min-height: 600px;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+    .inner-layout {
+        flex-direction: column;
+        width: 100%;
+    }
+}
