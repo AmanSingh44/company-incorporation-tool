@@ -13,7 +13,7 @@ A full-stack application for managing company incorporation processes, with a **
   - [Clone the repository](#clone-the-repository)
   - [Backend Setup (Docker)](#backend-setup-docker)
   - [Frontend Setup](#frontend-setup)
-- [Environment Variables](#environment-variables)
+
 
 
 ---
@@ -60,13 +60,39 @@ cd company-incorporation-tool
 
 ### Backend Setup (Docker)
 
-**1. Ensure `.env` exists in the project root. You can copy the example:**
+Two `.env` files are required:
 
-```bash
-cp .env.example .env
+**1. Root `.env` (used by Docker Compose)**
+
+Place this at the **project root** alongside `docker-compose.yml`:
+
+```env
+POSTGRES_USER=your_postgres_user
+POSTGRES_PASSWORD=your_postgres_password
+POSTGRES_DB=your_database_name
+
+NODE_ENV=your-environment
+APP_ORIGIN=your_app_origin
+PORT=your_port
+DATABASE_URL=postgresql://username:your_password@db:port/your_database_name
+ADMIN_KEY=your_admin_key_here
 ```
 
-**2. Build and start the backend and database containers:**
+**2. Server `.env` (used by the backend directly)**
+
+Place this inside the **`server/`** directory:
+
+```env
+NODE_ENV=development
+APP_ORIGIN=your_app_origin
+PORT=your_port
+DATABASE_URL=postgresql://username:your_password@db:port/your_database_name
+ADMIN_KEY=your_admin_key_here
+```
+
+
+
+**3. Build and start the backend and database containers:**
 
 ```bash
 docker compose up --build
@@ -103,31 +129,4 @@ npm run dev
 ```
 http://localhost:5173
 ```
-
-
-
----
-
-## Environment Variables
-
-The backend expects the following environment variables in `.env`:
-
-```env
-# Database
-POSTGRES_USER
-POSTGRES_PASSWORD
-POSTGRES_DB
-DATABASE_URL
-
-# App
-NODE_ENV
-APP_ORIGIN
-PORT
-ADMIN_KEY
-```
-
-> `.env.example` is provided as a reference template.  
-
-
----
 
